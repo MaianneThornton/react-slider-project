@@ -243,6 +243,8 @@ article {
   transition: var(--transition);
 }
 /* only the active slide will be visible, all other slides have an opacity of 0 (article class) */
+
+/* centers the slide */
 article.activeSlide {
   opacity: 1;
   transform: translateX(0);
