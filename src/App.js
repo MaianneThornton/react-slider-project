@@ -39,10 +39,10 @@ function App() {
           );
         })}
         {/* later move the buttons into a separate component */}
-        <button className="prev">
+        <button className="prev" onClick={() => setIndex(index - 1)}>
           <FiChevronLeft />
         </button>
-        <button className="next">
+        <button className="next" onClick={() => setIndex (index + 1)}>
           <FiChevronRight />
         </button>
       </div>
