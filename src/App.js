@@ -18,7 +18,17 @@ function App() {
         {people.map((person, personIndex)=> {
           // destructring the properties from the data.js file
           const {id, image, name, title, quote} = person;
-          
+          // more stuff coming up
+          // later move the person section into a separate component
+          return (
+            <article key={id}>
+              <img src={image} alt={name} className='person-img'/>
+              <h4>{name}</h4>
+              <p className="title">{title}</p>
+              <p className="text">{quote}</p>
+              <FaQuoteRight className='icon'/>
+            </article>
+          )
         })}
       </div>
     </section>
