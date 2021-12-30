@@ -14,17 +14,21 @@ function App() {
     if (index < 0) {
       setIndex(lastIndex);
     }
-    if (index > lastIndex){
+    if (index > lastIndex) {
       setIndex(0);
     }
   }, [index, people]);
 
-  // setting up auto slide: every 3 seconds scroll to the next slide
-  useEffect(()=> {
-    setInterval(()=>{
+  // setting up auto slide: once button is clicked (or by default) every 3 seconds (3000 milliseconds) scroll to the next slide
+  useEffect(() => {
+    let slider = setInterval(() => {
       setIndex(index + 1)
-    }, 3000)
-  }, [index])
+    }, 3000);
+    return () => {
+      // clears interval (to keep the data moving in order) then starts the function over again
+      clearInterval(slider)
+    }
+  }, [index]);
 
   return (
     <section className="section">
