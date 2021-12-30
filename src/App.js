@@ -19,7 +19,12 @@ function App() {
     }
   }, [index, people]);
 
-
+  // setting up auto slide: every 3 seconds scroll to the next slide
+  useEffect(()=> {
+    setInterval(()=>{
+      setIndex(index + 1)
+    }, 3000)
+  }, [index])
 
   return (
     <section className="section">
