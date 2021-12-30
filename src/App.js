@@ -28,8 +28,15 @@ function App() {
               <p className="text">{quote}</p>
               <FaQuoteRight className='icon'/>
             </article>
-          )
+          );
         })}
+      {/* later move the buttons into a separate component */}
+        <button className="prev">
+          <FiChevronLeft />
+        </button>
+        <button className="next">
+          <FiChevronRight />
+        </button>
       </div>
     </section>
   );
