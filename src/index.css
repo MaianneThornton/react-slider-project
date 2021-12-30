@@ -247,9 +247,11 @@ article.activeSlide {
   opacity: 1;
   transform: translateX(0);
 }
+/* slides all the way to the left */
 article.lastSlide {
   transform: translateX(-100%);
 }
+/* slides all the way to the right */
 article.nextSlide {
   transform: translateX(100%);
 }
